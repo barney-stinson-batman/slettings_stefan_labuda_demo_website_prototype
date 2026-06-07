@@ -154,7 +154,7 @@ strong { font-weight: 600; }
   letter-spacing: 0.03em;
   transition: all 0.2s;
 }
-.btn-call:hover { color: #fff; border-color: rgba(255,255,255,0.6); }
+.btn-call:hover { color: #fff; border-color: rgba(255,255,255,0.88); }
 
 .btn-underline {
   display: inline-flex;
@@ -725,7 +725,7 @@ strong { font-weight: 600; }
   font-family: var(--font-h);
   font-style: italic;
   font-size: 1rem;
-  color: rgba(255,255,255,0.6);
+  color: rgba(255,255,255,0.88);
   line-height: 1.65;
   border-left: 2px solid var(--gold);
   padding-left: 16px;
@@ -967,7 +967,7 @@ strong { font-weight: 600; }
 }
 .pc-list li {
   font-size: 0.875rem;
-  color: rgba(255,255,255,0.6);
+  color: rgba(255,255,255,0.88);
   padding-left: 4px;
 }
 .path-tenant .pc-list li { color: var(--text-soft); }
@@ -1713,7 +1713,7 @@ strong { font-weight: 600; }
     font-size: 1.05rem;
     font-weight: 400;
     padding: 20px 32px;
-    color: rgba(255,255,255,0.6);
+    color: rgba(255,255,255,0.88);
     border-bottom: 1px solid rgba(255,255,255,0.05);
     width: 100%;
     display: flex;
@@ -1727,7 +1727,7 @@ strong { font-weight: 600; }
 
   .nav-backdrop {
     position: fixed; inset: 0;
-    background: rgba(0,0,0,0.6);
+    background: rgba(0,0,0,0.45);
     z-index: 9050;
     animation: bd-fade 0.3s ease forwards;
   }
