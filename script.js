@@ -13,13 +13,21 @@ document.addEventListener('DOMContentLoaded', () => {
   };
   window.addEventListener('scroll', onScroll, { passive: true });
 
-  const burger  = document.getElementById('burger');
+  const burger   = document.getElementById('burger');
   const navLinks = document.getElementById('navLinks');
   let backdrop = null;
+  let navLinksOriginalParent = navLinks ? navLinks.parentNode : null;
+  let navLinksNextSibling    = navLinks ? navLinks.nextSibling : null;
 
   const closeMenu = () => {
     burger  && burger.classList.remove('open');
-    navLinks && navLinks.classList.remove('open');
+    if (navLinks) {
+      navLinks.classList.remove('open');
+      // Move navLinks back into nav if it was moved to body
+      if (navLinks.parentNode === document.body && navLinksOriginalParent) {
+        navLinksOriginalParent.insertBefore(navLinks, navLinksNextSibling);
+      }
+    }
     document.body.style.overflow = '';
     if (backdrop && backdrop.parentNode) {
       backdrop.parentNode.removeChild(backdrop);
@@ -32,17 +40,29 @@ document.addEventListener('DOMContentLoaded', () => {
       const isOpen = navLinks.classList.contains('open');
       if (!isOpen) {
         burger.classList.add('open');
+        document.body.appendChild(navLinks);
         navLinks.classList.add('open');
         document.body.style.overflow = 'hidden';
         backdrop = document.createElement('div');
         backdrop.className = 'nav-backdrop';
         backdrop.addEventListener('click', closeMenu);
-        document.body.appendChild(backdrop);
+        document.body.insertBefore(backdrop, navLinks);
       } else {
         closeMenu();
       }
     });
-    navLinks.querySelectorAll('.nl').forEach(l => l.addEventListener('click', closeMenu));
+
+    navLinks.querySelectorAll('.nl').forEach(l => {
+      l.addEventListener('click', (e) => {
+        const href = l.getAttribute('href');
+        e.preventDefault();
+        closeMenu();
+        if (href) {
+          document.body.style.opacity = '0';
+          setTimeout(() => { window.location.href = href; }, 300);
+        }
+      });
+    });
   }
 
   const revealEls = document.querySelectorAll('.reveal-up, .reveal-right, .reveal-fade');
@@ -135,6 +155,7 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('a[href]').forEach(link => {
     const href = link.getAttribute('href');
     if (!href || href.startsWith('#') || href.startsWith('tel:') || href.startsWith('mailto:') || href.startsWith('http')) return;
+    if (link.classList.contains('nl')) return;
     link.addEventListener('click', e => {
       e.preventDefault();
       document.body.style.opacity = '0';
