@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact — S Lettings Hendon NW4</title>
+  <meta name="description" content="Contact S Lettings, independent letting agents in Hendon NW4. Call 020 8203 3385 or send a message. Free rental valuations available."/>
+  <link rel="stylesheet" href="styles.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,700&family=DM+Sans:wght@300;400;500&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet"/>
+</head>
+<body>
+  <div class="preloader" id="preloader">
+    <div class="pl-inner">
+      <div class="pl-monogram">S<span>L</span></div>
+      <div class="pl-tagline">Lettings</div>
+      <div class="pl-bar"><div class="pl-fill"></div></div>
+    </div>
+  </div></div>
+  </div>
+  <div class="topbar">
+    <div class="tb-wrap">
+      <span class="tb-item">📍 39a Vivian Avenue, Hendon, London NW4 3UX</span><span class="tb-dot"></span>
+      <a href="tel:02082033385" class="tb-item tb-phone">020 8203 3385</a><span class="tb-dot"></span>
+      <span class="tb-item">Mon–Fri &nbsp;12:30pm – 5:30pm</span>
+    </div>
+  </div>
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo"><span class="logo-mark">S</span><span class="logo-dot">.</span><span class="logo-word">Lettings</span></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="nl">Home</a></li>
+        <li><a href="services.html" class="nl">Services</a></li>
+        <li><a href="landlords.html" class="nl">Landlords</a></li>
+        <li><a href="tenants.html" class="nl">Tenants</a></li>
+        <li><a href="contact.html" class="nl active">Contact</a></li>
+      </ul>
+      <a href="contact.html" class="nav-cta">Get in Touch</a>
+      <button class="burger" id="burger"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <section class="page-hero short-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="index.html">Home</a> / Contact</div>
+      <h1 class="ph-h1 reveal-up">Get in Touch.</h1>
+      <p class="ph-sub reveal-up d1">Call us, send a message or visit our office on Vivian Avenue. We're here Monday to Friday and always happy to help.</p>
+    </div>
+  </section>
+
+  <section class="section contact-section">
+    <div class="container">
+      <div class="contact-grid">
+
+        <div class="cg-form reveal-up">
+          <h2 class="sec-h2">Send us<br/><em>a message.</em></h2>
+          <p class="cg-intro">Whether you're a landlord looking to let your property, a tenant searching for a home, or just want to find out more — fill in the form and we'll be in touch promptly.</p>
+
+          <form class="the-form" id="contactForm" novalidate>
+            <div class="form-row-2">
+              <div class="fgroup">
+                <label for="f-name">Full Name *</label>
+                <input type="text" id="f-name" placeholder="Your full name" required/>
+                <span class="ferr" id="nameErr"></span>
+              </div>
+              <div class="fgroup">
+                <label for="f-phone">Phone Number</label>
+                <input type="tel" id="f-phone" placeholder="07700 000000"/>
+              </div>
+            </div>
+            <div class="fgroup">
+              <label for="f-email">Email Address *</label>
+              <input type="email" id="f-email" placeholder="you@email.com" required/>
+              <span class="ferr" id="emailErr"></span>
+            </div>
+            <div class="fgroup">
+              <label for="f-type">I am a...</label>
+              <select id="f-type">
+                <option value="">Select...</option>
+                <option>Landlord looking to let a property</option>
+                <option>Landlord looking for property management</option>
+                <option>Tenant looking for a property to rent</option>
+                <option>Existing tenant with an enquiry</option>
+                <option>Other enquiry</option>
+              </select>
+            </div>
+            <div class="fgroup">
+              <label for="f-property">Property Address (if applicable)</label>
+              <input type="text" id="f-property" placeholder="e.g. 12 Example Road, Hendon NW4"/>
+            </div>
+            <div class="fgroup">
+              <label for="f-msg">Your Message *</label>
+              <textarea id="f-msg" rows="5" placeholder="Tell us how we can help — the more detail, the better we can assist..." required></textarea>
+              <span class="ferr" id="msgErr"></span>
+            </div>
+            <button type="submit" class="btn-primary btn-full" id="submitBtn">
+              <span id="btnTxt">Send Message</span>
+              <span id="btnLoad" style="display:none">Sending...</span>
+            </button>
+            <div class="form-success" id="formSuccess" style="display:none">
+              <div class="fs-icon">✓</div>
+              <h3>Message received.</h3>
+              <p>Thank you for contacting S Lettings. A member of our team will be in touch with you shortly.</p>
+            </div>
+          </form>
+        </div>
+
+        <div class="cg-info reveal-right">
+          <div class="ci-call">
+            <div class="ci-label">Call Us Directly</div>
+            <a href="tel:02082033385" class="ci-phone">020 8203 3385</a>
+            <p>Available Monday to Friday, 12:30pm – 5:30pm. We always aim to answer promptly.</p>
+          </div>
+
+          <div class="ci-block">
+            <div class="ci-label">Office Address</div>
+            <p class="ci-main">
+              39a Vivian Avenue<br/>
+              Hendon<br/>
+              London <strong>NW4 3UX</strong>
+            </p>
+          </div>
+
+          <div class="ci-block">
+            <div class="ci-label">Opening Hours</div>
+            <div class="ci-hours">
+              <div class="cih-row"><span class="tb-item">Monday</span><span>12:30 – 17:30</span></div>
+              <div class="cih-row"><span>Tuesday</span><span>12:30 – 17:30</span></div>
+              <div class="cih-row"><span>Wednesday</span><span>12:30 – 17:30</span></div>
+              <div class="cih-row"><span>Thursday</span><span>12:30 – 17:30</span></div>
+              <div class="cih-row"><span>Friday</span><span>12:30 – 17:30</span></div>
+              <div class="cih-row cih-closed"><span>Saturday</span><span>Closed</span></div>
+              <div class="cih-row cih-closed"><span>Sunday</span><span>Closed</span></div>
+            </div>
+            <div class="open-status" id="openStatus"></div>
+          </div>
+
+          <div class="ci-block">
+            <div class="ci-label">Getting Here</div>
+            <p class="ci-main">
+              🚇 Hendon Central (Northern Line) — 0.12 miles<br/>
+              🚌 Buses: 83, 143, 183, 186, 245
+            </p>
+          </div>
+
+          <div class="ci-map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2482.0!2d-0.2048!3d51.5825!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487611b4c4b3c5e7%3A0x1234567890abcdef!2s39a+Vivian+Avenue%2C+London+NW4+3UX!5e0!3m2!1sen!2suk!4v1"
+              width="100%" height="240"
+              style="border:0; border-radius:10px;"
+              allowfullscreen="" loading="lazy"
+              title="S Lettings location">
+            </iframe>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="fg-brand">
+          <div class="fg-logo">S<span>.</span> Lettings</div>
+          <p>Independent residential lettings and property management specialists, based in Hendon NW4. Led by Stefan Labuda.</p>
+          <div class="fg-contact"><a href="tel:02082033385" class="tb-item tb-phone">020 8203 3385</a><span>39a Vivian Avenue, Hendon NW4 3UX</span></div>
+        </div>
+        <div class="fg-col"><h4>Navigate</h4><ul><li><a href="index.html">Home</a></li><li><a href="services.html">Services</a></li><li><a href="landlords.html">Landlords</a></li><li><a href="tenants.html">Tenants</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+        <div class="fg-col"><h4>Services</h4><ul><li><a href="services.html">Let Only</a></li><li><a href="services.html">Rent Collection</a></li><li><a href="services.html">Full Management</a></li><li><a href="services.html">Tenant Referencing</a></li><li><a href="services.html">Property Valuations</a></li></ul></div>
+        <div class="fg-col"><h4>Hours</h4><div class="fg-hours"><div class="fh"><span class="tb-item">Monday – Friday</span><span>12:30 – 17:30</span></div><div class="fh fh-closed"><span>Saturday – Sunday</span><span>Closed</span></div></div></div>
+      </div>
+      <div class="footer-bottom"><span>© 2025 S Lettings · 39a Vivian Avenue, Hendon NW4 3UX</span></div>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
